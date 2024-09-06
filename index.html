@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-..."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
+    />
+    <title>adidas arena -- Accueil</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+ 
+
+
+
+
+
+
+
+<!-- My- Website Content -->
+
+  <div id="main">
+    
+    <video id="myVideo" width="640" height="360" autoplay loop muted playsinline>
+      <source src="https://www.adidasarena.com/videos/preloader-mobile.mp4" type="video/mp4">
+    </video>
+    
+    <div id="loader">
+      
+     
+    </div>
+    <div id="green"></div>
+
+    <div class="content">
+
+    <div id="homepage">
+      <div id="nav">
+        <a href="#"
+          ><img
+            src="data:image/png;base64,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"
+            alt=""
+        /></a>
+        <a href="#">PROGRAMMATION</a>
+        <a href="#">MENU</a>
+        <a href="#"><i class="ri-menu-fill"></i></a>
+      </div>
+      <div class="mask" id="mask">
+        <img
+          src="https://adidasarena.directus.app/assets/8f065a57-fc7a-469c-bde9-2b461df28e20?format=webp&quality=90&width=400"
+          alt=""
+        />
+      </div>
+      <div  class="ball">
+        <img
+          src="https://adidasarena.directus.app/assets/19c1fd05-4af0-421c-848b-ac29445d78d2?format=webp&quality=90&width=400"
+          alt=""
+        />
+      </div>
+      <div class="scrollarrow">
+        <h5>SCROLL</h5>
+
+        <div class="scroll-down-arrow">
+          <i class="ri-arrow-down-double-fill"></i>
+        </div>
+      </div>
+      <div class="homecorner">
+        <img
+          src="https://images.prismic.io/parisentertainmentcompany/0cd3c10a-b329-4a1c-8d71-8614cb45388e_Accor+Arena.png?auto=compress,format&rect=0,0,540,720&w=540&h=720  "
+          alt=""
+        />
+        <div class="corsvg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 127 128"
+            xml:space="preserve"
+            class="app-svg-sticker app-home-hero__sticker"
+          >
+            <g id="bg">
+              <circle
+                transform="rotate(-45.001 63.672 64.09)"
+                cx="63.7"
+                cy="64.1"
+                fill="#e3530f"
+                r="63.5"
+              ></circle>
+              <path
+                d="M63.7 1.1c34.7 0 63 28.3 63 63s-28.3 63-63 63-63-28.3-63-63 28.2-63 63-63m0-1c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64S99 .1 63.7.1z"
+                fill="#181818"
+              ></path>
+            </g>
+            <path
+              d="M63.2 83.9c11 .1 19.9-8.8 20-19.8.1-11-8.8-19.9-19.8-20m-.2 39.8c-11-.1-19.8-9-19.8-20m19.8 20c5.6 0 10.2-8.9 10.2-19.8.1-11-4.4-19.9-10-19.9m-.2 39.7c-5.6 0-10.1-9-10-19.9.1-11 4.6-19.9 10.2-19.8m-20 19.7c.1-11 9-19.8 20-19.8m-20 19.8 40.1.2M50.9 48.3s13.2 6.1 24.9.1m-.1 31.3s-13.2-6.1-24.9-.1"
+              fill="none"
+              stroke="#181818"
+            ></path>
+            <g
+              data-svg-origin="64.00983047485352 65.4599962234497"
+              transform="matrix(-0.87475,0.48458,-0.48458,-0.87475,151.72303,91.70324)"
+              style="
+                translate: none;
+                rotate: none;
+                scale: none;
+                transform-origin: 0px 0px;
+              "
+            >
+              <path
+                fill="#181818"
+                d="m15.94,54.39l3.16.66.52-2.52,1.58.33-.52,2.52,4.83,1-.36,1.75-11.16-2.31.97-4.68,1.58.33-.61,2.93Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m15.59,46.74l-.38,1.12-1.73-1.81.46-1.35,1.66,2.04Zm10.56,6.7l-10.78-3.68,1.54-4.53,1.53.52-.97,2.83,3.06,1.04.83-2.44,1.53.52-.83,2.44,3.13,1.07.97-2.83,1.53.52-1.54,4.53Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m29.26,45.75l-.83,1.66-11.31-2.83.88-1.76,8.39,2.54-7.08-5.16.88-1.76,9.08,7.32Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m32.6,40.45l-4.68-1.45-.58.83,3.83,2.67-1.02,1.47-9.35-6.51,1.65-2.36c.6-.86,1.24-1.32,1.93-1.39.69-.07,1.52.24,2.49.92.58.4,1.02.82,1.33,1.26s.43.95.35,1.53l5.12,1.5-1.07,1.54Zm-6.76-4.35c-.19-.13-.38-.25-.57-.35-.19-.1-.37-.17-.55-.2-.17-.03-.34,0-.5.06s-.31.2-.44.39l-.63.91,2.86,1.99.63-.91c.13-.19.21-.38.22-.55.01-.17-.03-.34-.12-.49-.09-.15-.21-.3-.37-.44-.16-.14-.34-.28-.53-.42Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m33.83,38.93l-8.59-7.48,1.18-1.35,8.59,7.48-1.18,1.35Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m35.34,37.14l-7.86-8.25,3.46-3.3,1.12,1.17-2.17,2.06,2.23,2.34,1.86-1.78,1.11,1.17-1.86,1.78,2.29,2.4,2.17-2.06,1.12,1.17-3.46,3.3Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m42.3,31.29l-3.93-2.93-.82.59,2.72,3.8-1.46,1.04-6.64-9.25,2.34-1.68c.85-.61,1.61-.83,2.28-.66.67.17,1.35.73,2.04,1.69.41.57.69,1.11.83,1.63.15.51.09,1.03-.18,1.56l4.33,3.12-1.52,1.09Zm-4.92-6.36c-.14-.19-.28-.36-.42-.52-.15-.16-.3-.28-.45-.37-.15-.09-.32-.12-.49-.11-.17.01-.36.09-.55.23l-.9.64,2.03,2.83.9-.64c.19-.14.32-.29.39-.45.07-.16.09-.33.05-.5-.03-.17-.1-.35-.2-.54-.1-.19-.22-.38-.36-.57Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m47.99,28.1l-.5-1.35.73-6.18c.03-.27.03-.59,0-.95-.04-.36-.13-.73-.27-1.12-.12-.31-.27-.52-.48-.62-.2-.1-.41-.11-.63-.03s-.38.23-.48.43c-.1.21-.09.47.02.78l.26.69-1.59.59-.24-.63c-.16-.43-.23-.8-.22-1.12.01-.32.09-.62.22-.89.14-.28.34-.53.61-.76.27-.23.56-.4.88-.52.32-.12.64-.19.95-.2.31-.01.62.04.91.16.28.12.55.31.79.56.24.25.44.59.6,1.02.15.39.24.82.29,1.28.05.46.05.89,0,1.28l-.69,5.52,3-1.12.53,1.42-4.69,1.75Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m56.94,22.87c.1.45.13.83.07,1.14-.06.31-.17.6-.34.86s-.39.48-.67.67c-.28.19-.59.32-.93.4-.34.08-.68.1-1.02.06-.34-.04-.64-.14-.91-.3-.27-.16-.5-.36-.69-.62-.19-.26-.34-.61-.44-1.05l-1.49-6.36c-.1-.45-.13-.83-.07-1.14.06-.31.17-.6.34-.86.17-.26.4-.48.68-.67.28-.19.6-.32.94-.4.34-.08.68-.1,1.01-.06s.63.14.9.3.5.36.69.62c.19.26.34.61.44,1.05l1.49,6.36Zm-3.15-6.03c-.08-.32-.21-.54-.4-.66s-.4-.15-.63-.1c-.23.05-.4.18-.53.37-.12.19-.15.45-.07.77l1.52,6.48c.08.32.21.54.41.66.2.12.41.15.64.1.23-.05.4-.18.52-.37.12-.19.14-.45.07-.77l-1.52-6.48Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m57.45,25.25l-.15-1.43,2.26-5.8c.1-.26.18-.56.23-.92.05-.35.06-.74.02-1.15-.03-.33-.14-.57-.31-.72s-.37-.21-.61-.19c-.23.02-.42.12-.57.3s-.2.43-.17.76l.08.73-1.69.18-.07-.67c-.05-.46-.03-.84.07-1.14.09-.3.24-.57.44-.81.2-.24.46-.43.78-.58.32-.15.64-.24.98-.28.34-.04.66-.02.97.04.31.06.59.19.84.38.24.19.45.44.62.74.17.3.28.68.33,1.14.04.41.03.85-.04,1.31-.07.46-.18.87-.32,1.24l-2.05,5.17,3.18-.33.16,1.51-4.98.52Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m66.9,23.06l-.04,1.78-1.7-.03.04-1.78-3.17-.06.03-1.52,3.09-8.03,1.65.03-3,8.04,1.42.03.04-2.03,1.7.04-.04,2.03.78.02-.03,1.52-.78-.02Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m97.76,28.49l-2.24,2.33,1.85,1.79-1.12,1.16-1.85-1.79-3.42,3.55-1.29-1.24,7.91-8.2,3.44,3.32-1.12,1.16-2.15-2.08Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m93.1,37.62l8.85-7.17,3.01,3.72-1.25,1.02-1.88-2.32-2.51,2.04,1.62,2-1.25,1.02-1.62-2-2.57,2.08,1.88,2.32-1.26,1.02-3.01-3.72Zm11.29-5.38l-.75-.92,2.45-.5.9,1.11-2.6.32Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m97.95,44.33l-.97-1.58,8.41-8.08,1.03,1.68-6.61,5.76,8.14-3.26,1.03,1.68-11.03,3.81Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m100.68,50l3.72-3.2-.39-.93-4.3,1.83-.7-1.65,10.49-4.45,1.13,2.65c.41.96.46,1.75.15,2.37-.31.62-1.01,1.16-2.1,1.62-.65.28-1.24.43-1.77.46-.53.03-1.03-.14-1.49-.52l-3.99,3.54-.73-1.72Zm7.28-3.41c.22-.09.42-.19.6-.3s.34-.23.46-.36.19-.28.21-.46c.02-.17,0-.37-.1-.58l-.43-1.02-3.21,1.36.43,1.02c.09.22.21.38.35.48s.3.16.48.16c.18,0,.37-.02.57-.08.21-.06.42-.13.63-.23Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m101.31,51.83l10.91-3.28.52,1.72-10.91,3.28-.52-1.72Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m102.02,54.06l11.17-2.25.94,4.69-1.58.32-.59-2.93-3.17.64.51,2.52-1.58.32-.51-2.53-3.25.65.59,2.93-1.58.32-.94-4.69Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m103.24,63.07l4.58-1.76-.06-1.01-4.66.28-.11-1.79,11.37-.68.17,2.87c.06,1.04-.16,1.8-.66,2.28-.5.48-1.34.75-2.52.82-.7.04-1.31-.01-1.82-.16-.51-.15-.92-.48-1.23-.98l-4.95,1.99-.11-1.87Zm8-.76c.23-.01.46-.04.67-.08.21-.04.39-.1.55-.19s.27-.2.36-.36c.08-.15.12-.35.1-.58l-.07-1.1-3.48.21.07,1.1c.01.23.07.42.17.57.1.14.23.25.4.31.16.06.35.1.57.12.21.01.44.01.67,0Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m102.91,69.6l1.41.29,4.84,3.91c.21.17.48.34.8.5s.69.28,1.09.37c.32.07.58.04.78-.08s.31-.29.36-.52,0-.44-.11-.64c-.12-.2-.35-.33-.67-.39l-.72-.15.34-1.66.66.14c.45.09.8.23,1.07.41s.48.4.64.66c.16.26.27.57.32.92s.04.69-.03,1.02c-.07.33-.18.64-.34.91-.15.27-.36.5-.62.69-.25.18-.55.3-.89.37-.34.07-.74.06-1.19-.03-.41-.08-.82-.23-1.23-.44-.42-.21-.78-.43-1.08-.68l-4.3-3.52-.65,3.13-1.49-.31,1.02-4.9Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m102.58,79.95c-.43-.15-.77-.33-1-.55-.24-.22-.42-.47-.55-.75s-.2-.59-.21-.92.04-.67.16-1,.28-.63.49-.9.46-.47.73-.61c.27-.14.57-.23.89-.25.32-.03.7.04,1.13.18l6.17,2.12c.43.15.77.33,1,.55.24.22.42.46.55.75.13.28.2.59.2.93,0,.34-.05.68-.16,1.01-.11.33-.28.63-.49.89-.21.26-.46.46-.73.6s-.57.23-.89.25c-.32.03-.7-.04-1.13-.18l-6.17-2.12Zm6.79.54c.31.11.57.11.77.01s.34-.26.42-.48c.08-.22.07-.44-.03-.65-.1-.21-.3-.37-.62-.47l-6.29-2.16c-.31-.11-.57-.11-.78,0s-.35.27-.42.49c-.08.22-.06.43.04.64.1.2.3.36.62.47l6.29,2.16Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m100.3,79.11l1.29.64,3.71,5c.16.22.38.45.65.69.27.23.59.44.97.63.3.15.55.19.77.12.22-.07.38-.2.48-.41s.12-.43.05-.64c-.07-.22-.25-.4-.55-.55l-.66-.33.75-1.52.6.3c.41.2.72.42.93.66.21.24.36.51.45.8.09.29.12.62.08.97-.04.35-.14.68-.29.98-.15.31-.33.57-.55.8s-.47.4-.77.51c-.29.11-.61.15-.96.14-.35-.02-.73-.13-1.14-.33-.37-.18-.74-.43-1.09-.73-.35-.3-.64-.61-.88-.93l-3.28-4.49-1.41,2.87-1.36-.67,2.21-4.49Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m97.12,88.28l-1.48-.98.93-1.42,1.48.98,1.75-2.64,1.27.84,5.14,6.91-.91,1.38-5.19-6.83-.79,1.19,1.7,1.12-.93,1.42-1.7-1.12-.43.65-1.27-.84.43-.65Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m78.05,110.97l-.9-3.1-2.47.72-.45-1.55,2.47-.72-1.38-4.73,1.72-.5,3.18,10.94-4.59,1.34-.45-1.55,2.87-.84Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m70.85,102.71l1.34,11.31-4.75.56-.19-1.61,2.97-.35-.38-3.21-2.56.3-.19-1.61,2.56-.3-.39-3.29-2.97.35-.19-1.6,4.75-.56Zm-1.48,12.42l1.18-.14-.88,2.34-1.41.17,1.12-2.37Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m62.6,103.22l1.86.03,2.31,11.43-1.97-.03-1.32-8.66-1.61,8.62-1.97-.03,2.7-11.35Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m56.32,102.51l.73,4.85,1,.16.74-4.61,1.77.29-1.81,11.25-2.84-.46c-1.03-.17-1.73-.55-2.09-1.14-.36-.59-.44-1.47-.26-2.64.11-.7.3-1.28.56-1.74.26-.47.67-.79,1.23-.99l-.87-5.26,1.85.3Zm-.99,7.98c-.04.23-.06.45-.07.67,0,.21.01.41.06.58.05.17.14.31.27.42.13.11.32.19.55.23l1.09.18.55-3.44-1.09-.18c-.23-.04-.43-.02-.59.04-.16.07-.29.17-.39.32-.1.15-.18.32-.24.53-.06.21-.11.42-.15.66Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m54.44,102.08l-3.02,10.98-1.73-.47,3.02-10.99,1.73.48Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m52.18,101.49l-4.03,10.65-4.47-1.69.57-1.51,2.8,1.06,1.14-3.02-2.41-.91.57-1.51,2.41.91,1.17-3.1-2.8-1.06.57-1.51,4.47,1.69Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m43.9,97.73l-.94,4.81.88.49,2.25-4.1,1.57.86-5.48,9.99-2.52-1.39c-.92-.5-1.44-1.09-1.58-1.77s.08-1.54.65-2.57c.34-.62.71-1.1,1.11-1.45.4-.35.9-.52,1.49-.52l.95-5.25,1.64.9Zm-3.61,7.18c-.11.21-.21.41-.29.61-.08.2-.12.39-.14.56-.01.18.03.34.11.49s.23.28.44.4l.97.53,1.68-3.06-.97-.53c-.21-.11-.4-.17-.57-.16-.17,0-.33.06-.48.17-.14.1-.28.24-.4.42-.13.17-.25.36-.36.57Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m38.56,93.97l-1,1.04-5.89,2.01c-.26.09-.55.23-.85.41s-.6.43-.89.73c-.23.24-.35.47-.35.7s.08.42.25.58.37.24.6.24c.23,0,.46-.12.69-.36l.51-.53,1.22,1.18-.47.48c-.32.33-.62.56-.92.69-.29.13-.59.19-.9.19-.31,0-.62-.08-.94-.22-.32-.14-.6-.33-.85-.57-.25-.24-.44-.49-.59-.77s-.23-.57-.25-.89c-.01-.31.04-.63.16-.95.12-.33.34-.66.66-.99.29-.3.63-.57,1.03-.81.4-.24.78-.43,1.16-.55l5.27-1.76-2.3-2.22,1.05-1.09,3.61,3.47Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m29.97,88.17c.36-.29.69-.47,1-.56.31-.08.62-.11.92-.07.31.04.6.15.89.32.29.17.54.39.77.67.22.27.39.57.5.9.11.32.15.64.13.95-.03.31-.11.6-.26.89-.15.28-.4.57-.76.86l-5.08,4.1c-.36.29-.69.47-1,.56-.31.08-.62.11-.92.07-.31-.04-.61-.15-.9-.32-.29-.17-.55-.4-.77-.67-.22-.27-.38-.57-.49-.89-.11-.32-.15-.63-.12-.94s.11-.6.26-.89c.15-.28.4-.57.76-.86l5.08-4.1Zm-4.07,5.46c-.26.21-.4.42-.42.65-.02.22.04.43.18.61.15.18.34.29.56.32.23.03.47-.06.73-.27l5.18-4.18c.26-.21.4-.43.42-.66.02-.23-.04-.43-.19-.62s-.33-.29-.56-.31c-.23-.02-.47.07-.72.28l-5.18,4.18Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m31.88,86.67l-1.23.76-6.21.48c-.28.02-.59.08-.93.19-.34.11-.69.27-1.04.49-.28.17-.45.37-.51.59s-.03.43.1.63c.12.2.3.33.52.38.22.06.48,0,.76-.18l.63-.39.89,1.44-.57.35c-.39.24-.74.39-1.06.44-.31.05-.62.04-.92-.04-.3-.08-.58-.23-.86-.45-.27-.22-.5-.47-.68-.76-.18-.29-.31-.59-.38-.89-.08-.3-.08-.61-.03-.92.06-.3.2-.6.4-.88s.49-.55.88-.79c.35-.22.75-.39,1.2-.53s.86-.22,1.26-.25l5.55-.4-1.68-2.72,1.29-.8,2.63,4.26Z"
+              ></path>
+              <path
+                fill="#181818"
+                d="m25.81,79.11l1.62-.74.7,1.54-1.62.74,1.31,2.88-1.38.63-8.58.69-.68-1.5,8.54-.77-.59-1.3-1.85.84-.7-1.54,1.85-.84-.32-.71,1.38-.63.32.71Z"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="corstar">
+          <svg
+            width="37"
+            height="41"
+            viewBox="0 0 37 41"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="app-home-hero__stars"
+          >
+            <path
+              d="M25.98 19.672c0 6.922 3.462 10.383 10.384 10.383m0 0c-6.922 0-10.383 3.46-10.383 10.383M15.597 30.055c6.923 0 10.384-3.461 10.384-10.383m0 20.766c0-6.922-3.462-10.383-10.384-10.383M8 0c0 5.455 2.667 8.183 8 8.183m0 0c-5.333 0-8 2.727-8 8.182M0 8.183c5.333 0 8-2.728 8-8.183m0 16.365c0-5.455-2.667-8.182-8-8.182"
+              stroke="#181818"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hometext">
+        <h1>
+          <span   >BIENVENUE À</span> <br />
+          L'ADIDAS ARENA,<br />
+          ICI C'EST CHEZ <br />
+          VOUS!
+        </h1>
+      </div>
+    </div>
+
+    <div class="notre">
+      <h1><span>NOTRE</span> PROGRAMMATION</h1>
+    
+    
+      
+      <div class="hover-btn">
+        <div class="btnpart1">
+          <h4>VOIR  TOUT</h4>
+          
+        </div>
+        <div class="btnpart2">
+          <i class="ri-arrow-right-line"></i>
+        
+        </div>
+      </div>
+    </div>
+
+    <div    id="card3">
+      <div class="cards">
+        <div class="cardphoto">
+          <img
+            src="https://www.accorarena.com/uploads/aha/generated/w600,h600,fcrop,q85/d2d6aea8-9a82-4f4c-96ed-c31146e01ea8.jpg"
+            alt=""
+          />
+        </div>
+        <div class="cardinfo">
+          <h5>SPORT</h5>
+          <p>24 <span>FÉVRIER</span> 2024</p>
+        </div>
+        <h1 style="color: #000">2024 SLS <br>CHAMPIONSHIP TOUR </h1>
+        <div class="cardbottom">
+          <p>
+          À partir de
+          35€
+        </p>
+        <div class="card-btn">
+          <div class="btnpart1">
+            <h4>
+              Réserver
+            </h4>
+            
+          </div>
+          <div class="btnpart2">
+            <i class="ri-arrow-right-line"></i>
+          
+          </div>
+        </div>
+      </div>
+      </div>
+      <div  class="cards">
+        <div class="cardphoto">
+          <img
+            src="https://www.accorarena.com/uploads/aha/generated/w600,h600,fcrop,q85/195aa27d-41c1-4e35-952e-71acf703dbba.jpg"
+            alt=""
+          />
+        </div>
+        <div class="cardinfo">
+          <h5>SPORT</h5>
+          <p>5 AU 10 MARS 2024
+
+          </p>
+        </div>
+        <h1>
+          Yonex <br> Internationaux de <br> France de <br> Badminton
+         </h1>
+        <div class="cardbottom">
+          <p>
+          À partir de
+          35€
+        </p>
+        <div class="card-btn">
+          <div class="btnpart1">
+            <h4>
+              
+Préventes
+            </h4>
+            
+          </div>
+          <div class="btnpart2">
+            <i class="ri-arrow-right-line"></i>
+          
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="cards">
+        <div class="cardphoto">
+          <img
+            src="https://www.accorarena.com/uploads/aha/generated/w600,h600,fcrop,q85/b898300d-eed6-4025-9683-47fdbfb468c8.png"
+            alt=""
+          />
+        </div>
+        <div class="cardinfo">
+          <h5>SPORT</h5>
+          <p>24  2024</p>
+        </div>
+        <h1>zola </h1>
+        <div class="cardbottom">
+          <p>
+          À partir de
+          35€
+        </p>
+        <div class="card-btn">
+          <div class="btnpart1">
+            <h4>
+              List de sora
+            </h4>
+            
+          </div>
+          <div class="btnpart2">
+            <i class="ri-arrow-right-line"></i>
+          
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="cursor"> <i class="fa fa-star fa-2x"></i></div>
+
+    </div>
+
+    <div id="textphoto2line">
+
+<p>UNE DESTINATION <br>  D’EXPRESSION POUR LES <br> ÉNERGIES CRÉATIVES . OÙ <br> MUSIQUE, SPORT, CULTURE & <br>LIFESTYLE POUR TOUS SE <br> RENCONTRENT. ENSEMBLE <br> DONNONS VIE À L’ESPRIT  <br> ADIDAS ARENA !
+<br></p>
+<div class="oreline">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 520 32" width="520" height="32" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><clipPath id="__lottie_element_181"><rect width="520" height="32" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_181)"><g transform="matrix(1,0,0,1,260,16)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(255,74,72)" stroke-opacity="1" stroke-width="4" d=" M260.38299560546875,-4.513000011444092 C130.36099243164062,-3.0350000858306885 0.8669999837875366,-0.11900000274181366 -128.91200256347656,8.083000183105469 C-148.5540008544922,9.324000358581543 -204.64599609375,18.316999435424805 -187.95599365234375,7.886000156402588 C-180.1199951171875,2.989000082015991 -161.46299743652344,4.934000015258789 -152.92300415039062,4.146999835968018 C-133.8979949951172,2.3949999809265137 -114.9010009765625,0.4830000102519989 -95.8479995727539,-0.9700000286102295 C-25.683000564575195,-6.322000026702881 44.683998107910156,-9.23900032043457 114.93900299072266,-13.17300033569336 C120.22200012207031,-13.468999862670898 208.36700439453125,-11.321999549865723 207.44000244140625,-10.02400016784668 C203.79600524902344,-4.921999931335449 175.28799438476562,-8.055000305175781 172.01400756835938,-8.055000305175781 C140.8489990234375,-8.055000305175781 109.68800354003906,-7.947000026702881 78.52799987792969,-7.26800012588501 C0.1850000023841858,-5.560999870300293 -77.97599792480469,-0.2750000059604645 -156.2689971923828,2.572000026702881 C-190.947998046875,3.8329999446868896 -226.81900024414062,3.609999895095825 -260.38299560546875,13.199999809265137"></path></g></g></g></svg>
+</div>
+
+
+<div  class="moveside">
+<img src="https://adidasarena.directus.app/assets/aec56285-4ab0-4469-bde5-8bedcf3154cb?format=webp&quality=90&width=400" alt="">
+</div>
+<div class="move">
+<img src="https://adidasarena.directus.app/assets/d5ea31a6-740c-4a98-b0b4-b9aa3ee29230?format=webp&quality=90&width=400" alt="">
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+ <div class="twoline">
+<div class="scrolldiv ">
+<h2><span style="color: orangered;">GAME</span> CONCERT <span style="color: blue;">BASKET</span> SPORT E-SPORT <span style="color: orangered;">FOOD</span> CULTURE</h2>
+<h2><span style="color: orangered;">GAME</span> CONCERT <span style="color: blue;">BASKET</span> SPORT E-SPORT <span style="color: orangered;">FOOD</span> CULTURE</h2>
+<h2><span style="color: orangered;">GAME</span> CONCERT <span style="color: blue;">BASKET</span> SPORT E-SPORT <span style="color: orangered;">FOOD</span> CULTURE</h2>
+<h2><span style="color: orangered;">GAME</span> CONCERT <span style="color: blue;">BASKET</span> SPORT E-SPORT <span style="color: orangered;">FOOD</span> CULTURE</h2>
+      </div>
+<div class="scrolldiv2">
+
+<h2><span style="color: orangered;">URBAN</span> HYBRIDATION <span style="color: blue;">INCLUSIVITÉ</span> CO-CRÉATION <span style="color: orangered;">PARTAGE</span> ÉLÉVATION<h2>
+<h2><span style="color: orangered;">URBAN</span> HYBRIDATION <span style="color: blue;">INCLUSIVITÉ</span> CO-CRÉATION <span style="color: orangered;">PARTAGE</span> ÉLÉVATION<h2>
+<h2><span style="color: orangered;">URBAN</span> HYBRIDATION <span style="color: blue;">INCLUSIVITÉ</span> CO-CRÉATION <span style="color: orangered;">PARTAGE</span> ÉLÉVATION<h2>
+<h2><span style="color: orangered;">URBAN</span> HYBRIDATION <span style="color: blue;">INCLUSIVITÉ</span> CO-CRÉATION <span style="color: orangered;">PARTAGE</span> ÉLÉVATION<h2>
+      </div>
+  
+
+
+
+
+
+
+
+
+
+    
+  </div>
+
+  
+<div class="nos3cards">
+<div class="notre">
+  <h1><span>NOS</span>  ACTUS</h1>
+
+
+  
+  <div class="hover-btn">
+    <div class="btnpart1">
+      <h4>VOIR  TOUT</h4>
+      
+    </div>
+    <div class="btnpart2">
+      <i class="ri-arrow-right-line"></i>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="nos">
+  
+  <div  class="nosphoto">
+    <div class="cardphoto">
+   <img src="https://adidasarena.directus.app/assets/c7faa385-8e48-454d-bea3-50025d0a9a6b.jpg?format=webp&quality=90&width=680" alt="">
+    </div>
+    <div class="cardinfo">
+      <h5 style="color: blue;">21 JUIN 2023</h5>
+    </div>
+    <h1 style="margin-left: 1vw;">L’ADIDAS ARENA : UN
+      VÉRITABLE LIEU DE VIE</h1>
+    <div class="cardbottom">
+      <p>
+        À partir de
+        35€
+    </p>
+    <div style="background-color: transparent; color: blue; border: 0.5px solid #dadada;" class="card-btn">
+      <div class="btnpart1">
+        <h4>
+          lIRE LA SUITE
+        </h4>
+        
+      </div>
+      <div class="btnpart2">
+        <i class="ri-arrow-right-line"></i>
+      
+      </div>
+    </div>
+  </div>
+  </div>
+    <div  class="nosphoto">
+      <div class="cardphoto">
+        <img
+          src="https://adidasarena.directus.app/assets/1ffb9505-78b8-426c-b1a4-61cc5a1f6fce.jpg?format=webp&quality=90&width=680"
+          alt=""
+        />
+      </div>
+      <div class="cardinfo">
+        <h5 style="color: blue;">13 OCTOBRE 2023</h5>
+      </div>
+      <h1 style="margin-left: 1vw;">L'ADIDAS ARENA : UNE EXPÉRIENCE VIP PAS COMME LES AUTRES </h1>
+      <div class="cardbottom">
+        <p>
+        À partir de
+        35€
+      </p>
+      <div style="background-color: transparent; color: blue; border: 0.5px solid #dadada;" class="card-btn">
+        <div class="btnpart1">
+          <h4>
+            Réserver
+          </h4>
+          
+        </div>
+        <div class="btnpart2">
+          <i class="ri-arrow-right-line"></i>
+        
+        </div>
+      </div>
+    </div>
+    </div>
+    <div  class="nosphoto">
+      <div class="cardphoto">
+        <img
+          src="https://adidasarena.directus.app/assets/bcf33ae2-340a-406d-9ee3-646e6ef2fb22.jpg?format=webp&quality=90&width=680"
+          alt=""
+        />
+      </div>
+      <div class="cardinfo">
+        <h5 style="color: blue;">21 JUIN 2023</h5>
+      </div>
+      <h1 style="margin-left: 1vw;">LE CHANTIER DE L'ADIDAS ARENA : ÉTAPE PAR ÉTAPE</h1>
+      <div class="cardbottom">
+        <p>
+          À partir de
+          35€
+      </p>
+      <div style="background-color: transparent; color: blue; border: 0.5px solid #dadada;" class="card-btn">
+        <div class="btnpart1">
+          <h4>
+            lIRE LA SUITE
+          </h4>
+          
+        </div>
+        <div class="btnpart2">
+          <i class="ri-arrow-right-line"></i>
+        
+        </div>
+      </div>
+    </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="zero1">
+  <div class="zeropart1">
+    <div class="row1">
+      <h1>UN ÉCOSYSTÈME <br>COMPLÉMENTAIRE <br>DE PARTENAIRES <p>NOTRE TEAM DE PARTENAIRES PROFITERA DE L’EXPOSITION D’UNE PROGRAMMATION RICHE ET TENDANCE, AUTOUR D’ÉVÈNEMENTS PRÉCURSEURS. L’ADIDAS ARENA C’EST UN NOUVEAU TERRITOIRE DES POSSIBLES. ET LE DYNAMISME DE PARIS 2024 EST UN TREMPLIN INTERNATIONAL SANS ÉGAL !</p>
+      <p>Ici on pense out of the box, innovation et créativité pour vous permettre, partenaires fondateurs, partenaires officiels et fournisseurs officiels d’interagir avec les fans d’une manière inédite. Ensemble, construisons une expérience divertissante fraîche, atypique et énergique !</p>
+    
+    </h1>
+        <h5><span style="-webkit-text-stroke: 1px #000;
+          color: transparent;">0</span>1 <br> <p>PARTENAIRE</p></h5>
+    </div>
+    <div class="row2">
+      <div class="hover-btn">
+        <div class="btnpart1">
+          <h4>VOIR  TOUT</h4>
+          
+        </div>
+        <div class="btnpart2">
+          <i class="ri-arrow-right-line"></i>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="zeropart2"></div>
+</div>
+  <div class="last">
+    <div class="restez">
+      <h4>RESTEZ AU COURANT, INSCRIVEZ-VOUS À NOTRE NEWSLETTER
+
+    </h4>
+  <h4>NOS PARTENAIRES</h4>
+</div>
+    <div class="restez2">
+      <h4 style="font-size: 3vw;opacity: 0.5;">EMAIL@EMAIL.COM
+
+    </h4>
+  <h4><img src="https://adidasarena.directus.app/assets/deb309d7-e880-450d-b2a9-612e877045cb?format=webp&quality=90&width=160" alt=""></h4>
+</div>
+<div class="restez3">
+  <img src="https://www.logolynx.com/images/logolynx/87/87e0e68e9a6fc3d7618db7939d7b5903.jpeg" alt="">
+  <ul>
+    <li>ACCUIEL</li>
+    <li>LE PROJECT</li>
+    <li>LE ARENA</li>
+    <li>L' BLOC</li>
+    <li>PROGRAMMATION</li>
+    <li>NOS ACTUS</li>
+  </ul>
+  <ul>
+    <li>CONTACT</li>
+    <li>NOUS RE </li>
+    <li>PARTNAIRE</li>
+  </ul>
+</div>
+
+<div class="restez4">
+  <div class="hover-container">
+    <i class="ri-instagram-line"></i> <!-- Replace with your icon class or content -->
+   <!-- Replace with your icon class or content -->
+  </div>
+  <div class="hover-container">
+    <i class="ri-facebook-line"></i><!-- Replace with your icon class or content -->
+   <!-- Replace with your icon class or content -->
+  </div>
+  <div class="hover-container">
+    <i class="ri-linkedin-fill"></i> <!-- Replace with your icon class or content -->
+   <!-- Replace with your icon class or content -->
+  </div>
+  <div class="hover-container">
+    <i class="ri-twitter-x-line"></i> <!-- Replace with your icon class or content -->
+   <!-- Replace with your icon class or content -->
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+</div>
+
+
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,768 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+    
+#main {
+  width: 100%;
+ 
+  /* background: rebeccapurple; */
+
+}
+#myVideo{
+  width: 100%;
+  height: 100vh;
+  background:#FFF9F3;
+}
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: orangered;
+  color: white;
+  z-index: 999999999999;
+}
+
+
+#green {
+  z-index: 999999999999;
+
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  background-color: blue;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  padding: 1vw;
+  
+
+}
+#homepage {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  border: 1px solid black;
+  z-index: 9999999999999999;
+  
+  
+}
+
+#nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 2vw;
+  gap: 2vw;
+  /* background: rebeccapurple; */
+}
+#nav a img {
+  width: 10vw;
+  height: 10vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1vw;
+}
+#nav a i {
+  font-size: 1.5vw;
+}
+.mask {
+  width: 15vw;
+  height: 30vh;
+  position: absolute;
+  top: 0;
+  rotate: 8deg;
+  transition: transform 0.5s ease; /* Add a transition for smooth rotation */
+}
+
+.mask img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ball {
+  width: 15vw;
+  height: 40vh;
+  position: absolute;
+  bottom: -10%;
+  left: 40%;
+  transition: transform 0.5s ease; /* Add a transition for smooth rotation */
+}
+
+.ball img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scrollarrow {
+  position: absolute;
+  bottom: 0;
+  width: 4vw;
+  height: 20vh;
+  border: 0.5px solid black;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.scrollarrow h5 {
+  font-weight: 700;
+  opacity: 0.6;
+}
+.scroll-down-arrow {
+  cursor: pointer;
+  animation: bounce 2s infinite; /* Add a bouncing animation */
+}
+.scroll-down-arrow i {
+  font-size: 2vw;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.homecorner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30vw;
+  height: 60vh;
+}
+.homecorner img {
+  /* opacity: 0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.corsvg {
+  top: 20%;
+  left: -8%;
+  position: absolute;
+  height: 15vh;
+  width: 15vh;
+  animation: rotate360 infinite 10s linear; /* Adjust the duration as needed */
+  /* background-color: black;     */
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.corstar {
+  top: 10%;
+  left: -20%;
+  position: absolute;
+  height: 15vh;
+  width: 15vh;
+}
+.hometext {
+  left: 5%;
+  top: 20%;
+  position: absolute;
+}
+.hometext h1 {
+  font-weight: 600;
+  font-size: 7vw;
+  letter-spacing: -0.4vw;
+  line-height: 0.9;
+}
+.hometext h1 span {
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+}
+
+.notre {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.notre h1 {
+  font-weight: 600;
+  font-size: 4vw;
+  letter-spacing: -0.2vw;
+  line-height: 0.9;
+}
+.notre h1 span {
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+}
+
+.hover-btn {
+  position: relative;
+  width: 18vw;
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blue;
+  color: white;
+  padding: 1vw;
+  transition: color 0.3s, background-color 0.3s;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 0.5vw;
+  border-top: 1px solid #f2f2f2;
+}
+
+.hover-btn:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.hover-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 0;
+  background: orangered;
+  border-radius: 0.5vw;
+  z-index: -1;
+  transition: width 0.3s, height 0.3s;
+}
+
+.hover-btn:hover::after {
+  height: 100%;
+  width: 100%;
+}
+
+.btnpart2 i {
+  font-size: 2vw;
+}
+
+#card3 {
+  position: relative;
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: pink; */
+}
+.cursor{
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 68, 0, 0.597);
+  border-radius: 50%;
+  position:absolute;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards {
+  position: relative;
+  width: 30%;
+  height: 85vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #dadada;
+}
+.cardphoto {
+  width: 100%;
+  height: 50%;
+}
+.cardphoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cardinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+}
+.cardinfo p span {
+  background: #000;
+  color: aliceblue;
+}
+
+.cardinfo h5 {
+  font-size: 1vw;
+}
+.cardinfo p {
+  font-size: 1vw;
+}
+.cards h1 {
+  padding: 1vw;
+  font-size: 2.5vw;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.card-btn {
+  position: relative;
+  width: 12vw;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blue;
+  color: white;
+  padding: 1vw;
+  transition: color 0.3s, background-color 0.3s;
+  overflow: hidden;
+  z-index: 1;
+  border-top: 1px solid #f2f2f2;
+}
+
+.card-btn:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.card-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 0;
+  background: orangered;
+  z-index: -1;
+  transition: width 0.3s, height 0.3s;
+}
+
+.card-btn:hover::after {
+  height: 100%;
+  width: 100%;
+}
+
+.btnpart2 i {
+  font-size: 2vw;
+}
+.cardbottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+.cardbottom p {
+  padding: 1vw;
+  font-size: 1.2vw;
+}
+
+.cards:nth-child(1) {
+  position: absolute;
+  left: 0;
+  top: 1%;
+  rotate: 5deg;
+  bottom: 0;
+}
+.cards:nth-child(2) {
+  rotate: -5deg;
+  position: absolute;
+  left: 35%;
+  background: orangered;
+  color: #fff;
+}
+.cards:nth-child(2) .card-btn {
+  background: #f2f2f2;
+  color: orange;
+}
+.cards:nth-child(2) .card-btn:hover {
+  background: orange;
+  color: white;
+}
+.cards:nth-child(3) {
+  position: absolute;
+  right: 0%;
+  top: 3%;
+  background: blue;
+  color: white;
+  rotate: -5deg;
+}
+.cards:nth-child(3) .card-btn {
+  background: #f2f2f2;
+  color: blueviolet;
+}
+#textphoto2line {
+  position: relative;
+  width: 100%;
+  padding: 20vw 5vw;
+  display: flex;
+  flex-direction: column;
+}
+#textphoto2line p {
+  font-size: 3.5vw;
+  font-weight: 700;
+  letter-spacing: -0.2vw;
+  line-height: 1;
+  z-index: 999999999999;
+}
+.oreline {
+  width: 20%;
+  height: 2vw;
+}
+.move {
+  position: absolute;
+  width: 20vw;
+  height: 70vh;
+  top: 5%;
+  right: 10%;
+  rotate: 10deg;
+  border-radius: 1vw;
+}
+.move img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 4px solid orangered;
+  border-radius: 1vw;
+}
+.moveside {
+  position: absolute;
+  width: 20vw;
+  height: 60vh;
+  top: 40%;
+  right: 30%;
+  rotate: -6deg;
+  border-radius: 1vw;
+}
+.moveside img {
+  border-radius: 1vw;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.twoline {
+  height: 250px;
+  padding: 1vw 0;
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.scrolldiv {
+  position: absolute;
+  white-space: nowrap;
+  top: 0;
+
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.scrolldiv h2 {
+  display: inline-block;
+  font-size: 100px;
+  font-weight: 500;
+  animation-name: scroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+
+
+.scrolldiv2 {
+  position: absolute;
+  bottom: 0;
+
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.scrolldiv2 h2 {
+  display: inline-block;
+  font-size: 100px;
+  font-weight: 500;
+  animation-name: scroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(calc(-100% - 32px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.nos3cards{
+  padding: 3vw;
+  /* background:pink; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+
+.nos{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nosphoto {
+  position: relative;
+  width: 30%;
+  height: 85vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid  black;
+}
+ h1.in-view,
+h5.in-view,
+h6.in-view,
+p.in-view {
+  /* Add your animation styles here */
+   opacity: 1;
+  transform: translateY(0); 
+  /* Add more styles as needed */
+} 
+
+/* Initial styles before entering the view */
+h1,
+h5,
+h6,
+p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in, transform 1s ease-in;
+} 
+.zero1{
+  position: relative;
+  width: 100%;
+  padding: 3vw;
+  /* background: pink; */
+  margin-top: 2vw;
+}
+.zeropart1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.row1{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.row1 h1{
+  display: flex;
+  flex-direction: column  ;
+  font-size: 5vw;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.2vw;
+}
+.row1 h1 p{
+  font-size: 1.2vw;
+  text-align: left;
+  width: 40%;
+  letter-spacing: -0.1vw;
+  line-height: 1.2;
+margin-top: 2vw;
+font-weight: 700;
+opacity: .6;
+
+}
+
+.row1 h5{
+  font-size: 6vw;
+  text-align: center;
+  font-weight: 400;
+}
+
+
+.row1 h5  p{
+  font-size: 1.5vw;
+  opacity: 0.5;
+  font-weight: 600;
+
+}
+.row2{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 2vw;
+}
+.zeropart2{
+  top: 30%;
+  right:-2%;
+  position: absolute;
+  width: 40vh;
+  height: 40vh;
+  background-image: url(https://banner2.cleanpng.com/20180524/clp/kisspng-arena-swimming-fina-world-championships-swimsuit-s-5b0788f4027bb9.1240474615272204680102.jpg);
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  transition: transform 0.3s; 
+
+
+}
+
+.zeropart2:hover{
+  transform: scale(1.1);
+}
+.last{
+  height: 100vh;
+  width: 100%;
+  padding: 2vw;
+  background: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.restez{
+  
+  margin-top: 2vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: red;  */
+}
+.restez h4{
+  font-size: 1.4vw;
+  font-weight: 600;
+}
+.restez2{
+  margin-top: 4vw;
+
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  /* background: red; */
+}
+.restez2 h4{
+  font-size: 1.4vw;
+  font-weight: 600;
+}
+.restez2 h4 img{
+  width: 25vh;
+  height: 25vh;
+  border: 1px solid white;
+}
+.restez3{
+  margin-top: 2vw;
+position: relative;
+  width: 40%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0 3vw;
+}.restez3 img{
+  width: 50vh;
+  height: 12vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.restez3 li{
+  margin-top: 0.5vw;
+    list-style-type: none;
+    font-size: 1vw;
+}
+.restez3 li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.restez4{
+  position: relative;
+  margin-top: 5vw;
+justify-content: center;
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.hover-container {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  overflow: hidden;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+
+.hover-container i {
+  font-size: 2vw;
+
+  color: white;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.hover-container:hover  {
+  color: black;
+  background: white;
+}
+
+.hover-container:hover  i{
+  color: black;
+  
+}
